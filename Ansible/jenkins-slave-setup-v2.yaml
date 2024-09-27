@@ -2,7 +2,7 @@
 - hosts: build-slave
   become: true
   tasks:
-  - name: updata ubuntu repo and cache
+  - name: update ubuntu repo and cache
     apt:
       update_cache: yes
       force_apt_get: yes
@@ -33,4 +33,14 @@
     service:
       name: docker
       state: started
-  # - name: give 777 permission on /var/run/docker.sock
+  
+  - name: give 777 permission on /var/run/docker.sock
+    file:
+      path: /var/run/docker.sock
+      state: file
+      mode: 0777
+
+  - name: start dicker at boot time
+    service: 
+      name: docker
+      enabled: yes
