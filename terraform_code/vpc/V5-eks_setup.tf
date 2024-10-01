@@ -6,7 +6,7 @@ resource "aws_instance" "demo-server" {
   ami           = "ami-0e86e20dae9224db8" # Ubuntu 24.04
   instance_type = "t2.micro"
   key_name      = "ddp"
-  // security_groups = [ "demo-sg" ]
+  //security_groups = [ "demo-sg" ]
   vpc_security_group_ids = [aws_security_group.demo-sg.id]
   subnet_id              = aws_subnet.dpp-public-subnet-01.id
   for_each               = toset(["Jenkins-master", "build-slave", "ansible"])
@@ -34,13 +34,6 @@ resource "aws_security_group" "demo-sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  # ingress {
-  #   description = "ttrend docker container access"
-  #   from_port = 8000
-  #   to_port = 8000
-  #   protocol = "tcp"
-  #   cidr_blocks = ["0.0.0.0/0"]
-  # }
 
   egress {
     from_port        = 0

@@ -73,7 +73,6 @@ resource "aws_iam_policy" "autoscaler" {
   ]
 }
 EOF
-
 }
 
 resource "aws_iam_role_policy_attachment" "AmazonEKSWorkerNodePolicy" {
@@ -118,8 +117,9 @@ resource "aws_iam_instance_profile" "worker" {
 
 ###############################################################################################################
 resource "aws_eks_cluster" "eks" {
-  name     = "jweyel-eks-01"
+  name     = "jw-eks-01"
   role_arn = aws_iam_role.master.arn
+
   vpc_config {
     subnet_ids = [var.subnet_ids[0], var.subnet_ids[1]]
   }
@@ -133,7 +133,6 @@ resource "aws_eks_cluster" "eks" {
     #aws_subnet.pub_sub2,
   ]
 }
-
 #################################################################################################################
 
 resource "aws_eks_node_group" "backend" {

@@ -4,7 +4,7 @@ resource "aws_security_group" "worker_node_sg" {
   vpc_id      = var.vpc_id
 
   ingress {
-    description = "SSH access"
+    description = "ssh access to public"
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
