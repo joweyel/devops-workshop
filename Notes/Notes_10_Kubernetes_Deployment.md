@@ -1,5 +1,7 @@
 # Section 10 - Depyloying applications with Kubernetes
 
+![alt text](imgs/jenkins_k8s.jpg)
+
 For deplying container to the created kubernetes cluster there has to be some configuration done. For this the following 4 yaml files are created.
 
 - [**`deployment.yaml`**](../kubernetes/deployment.yaml):
