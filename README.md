@@ -17,4 +17,3 @@ The covered topics are:
 10. [Deployment with Kubernetes](Notes/Notes_10_Kubernetes_Deployment.md)
 11. [Helm](Notes/Notes_11_Helm.md)
 12. [Prometheus and Grafana](Notes/Notes_12_Prometheus_Grafana.md)
-13. [Conclusion](Notes/Notes_13_Conclusion.md)

@@ -71,3 +71,8 @@ Link: https://prometheus.io/docs/introduction/overview/
    ```bash
    kubectl edit svc prometheus-grafana -n monitoring
    ```
+9. To login to Grafana account, use the below username and password
+   ```txt
+   username: admin
+   password: prom-operator
+   ```
