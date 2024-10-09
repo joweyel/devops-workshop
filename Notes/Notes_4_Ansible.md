@@ -46,12 +46,12 @@ Examplary conent:
 18.209.18.194
 [jenkins-master:vars]
 ansible_user=ec2-user
-ansible_ssh_private_key_file=/opt/dpo.pem
+ansible_ssh_private_key_file=/opt/ddp.pem
 [build-slave]
 54.224.107.148
 [build-slave:vars]
 ansible_user=ec2-user
-ansible_ssh_private_key_file=/opt/dpo.pem
+ansible_ssh_private_key_file=/opt/ddp.pem
 ```
 - Here the **private IPv4 addresses are used**, since they dont change every time the instance is created
 - Copying the keys for interaction to the ansible instance with `scp`
